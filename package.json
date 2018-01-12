@@ -1,0 +1,62 @@
+{
+  "name": "feathers-nuxt",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "server",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Amr A.Mohammed",
+    "email": "merodiro@gmail.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "server",
+    "test": "test/"
+  },
+  "engines": {
+    "node": "^9.0.0",
+    "yarn": ">= 0.18.0"
+  },
+  "scripts": {
+    "test": "yarn run eslint && yarn run mocha",
+    "eslint": "eslint server/. test/. --config .eslintrc.json",
+    "build": "nuxt build && backpack build",
+    "prestart": "npm run build",
+    "start": "node build/main.js",
+    "mocha": "mocha test/ --recursive --exit",
+    "dev": "backpack dev"
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^2.1.1",
+    "@feathersjs/authentication-jwt": "^1.0.2",
+    "@feathersjs/authentication-local": "^1.0.4",
+    "@feathersjs/client": "^3.1.2",
+    "@feathersjs/configuration": "^1.0.2",
+    "@feathersjs/errors": "^3.2.1",
+    "@feathersjs/express": "^1.1.2",
+    "@feathersjs/feathers": "^3.0.5",
+    "@feathersjs/socketio": "^3.0.2",
+    "compression": "^1.7.1",
+    "cookie-storage": "^3.1.0",
+    "cors": "^2.8.4",
+    "feathers-nedb": "^3.0.0",
+    "helmet": "^3.9.0",
+    "nedb": "^1.8.0",
+    "nuxt": "^1.0.0",
+    "serve-favicon": "^2.4.5",
+    "socket.io-client": "^2.0.4",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "backpack-core": "^0.5.0",
+    "eslint": "^4.15.0",
+    "eslint-loader": "^1.9.0",
+    "mocha": "^4.1.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
