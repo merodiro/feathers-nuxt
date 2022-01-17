@@ -28,7 +28,9 @@
     "prestart": "npm run build",
     "start": "node build/main.js",
     "mocha": "mocha test/ --recursive --exit",
-    "dev": "backpack dev"
+    "dev": "backpack dev",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.1.1",
@@ -44,12 +46,13 @@
     "cookie-storage": "^3.1.0",
     "cors": "^2.8.4",
     "feathers-nedb": "^3.0.0",
-    "helmet": "^3.9.0",
+    "helmet": "^3.21.1",
     "nedb": "^1.8.0",
-    "nuxt": "^1.0.0",
+    "nuxt": "^2.3.0",
     "serve-favicon": "^2.4.5",
-    "socket.io-client": "^2.0.4",
-    "winston": "^2.4.0"
+    "socket.io-client": "^2.4.0",
+    "winston": "^2.4.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "backpack-core": "^0.5.0",
@@ -58,5 +61,6 @@
     "mocha": "^4.1.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
-  }
+  },
+  "snyk": true
 }
